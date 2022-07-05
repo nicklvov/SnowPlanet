@@ -81,7 +81,7 @@ const createScene = function () {
     BABYLON.Texture.SKYBOX_MODE;
   skybox.material = skyboxMaterial
 
-  const ground = BABYLON.MeshBuilder.CreateGroundFromHeightMap("ground", "textures/terrain22.png", {
+  const ground = BABYLON.MeshBuilder.CreateGroundFromHeightMap("ground", "terrain22.png", {
     width: 4000, height: 4000, subdivisions: 250, maxHeight: 500, minHeight: 0
 });
   const groundMaterial = new BABYLON.StandardMaterial("ground", scene);
@@ -193,7 +193,7 @@ const createScene = function () {
   //Texture of each particle
   
   particleSystem.particleTexture = new BABYLON.Texture(
-    "textures/waterbump.png",
+    "waterbump.png",
     scene
   );
 
@@ -323,6 +323,9 @@ const createScene = function () {
   helper.enableInteractions()
   helper.enableTeleportation({floorMeshes: [ground]});
   */
+  var helper = scene.createDefaultXRExperience({createDeviceOrientationCamera: false})
+	helper.enableInteractions()
+  helper.enableTeleportation({floorMeshes: [ground]});
 
   return scene;
 };
