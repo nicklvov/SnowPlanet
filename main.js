@@ -329,6 +329,12 @@ const createScene = function () {
 };
 
 var scene = createScene();
+
+const helper = scene.createDefaultXRExperience({createDeviceOrientationCamera: false})
+ helper.enableInteractions()
+ helper.enableTeleportation({floorMeshes: [ground]});
+
+
 engine.runRenderLoop(function () {
   scene.render();
 });
