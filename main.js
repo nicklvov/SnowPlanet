@@ -79,26 +79,7 @@ const createScene = function () {
   );
   skyboxMaterial.reflectionTexture.coordinatesMode =
     BABYLON.Texture.SKYBOX_MODE;
-  skybox.material = skyboxMaterial;
-
-  /*
-  const ground = BABYLON.Mesh.CreateGroundFromHeightMap(
-    "ground",
-    "https://raw.githubusercontent.com/nicklvov/images/main/heighmap1.jpg",
-    4000,
-    4000,
-    250,
-    0,
-    100,
-    scene,
-    false
-  );
-  const groundMaterial = new BABYLON.StandardMaterial("ground", scene);
-  const snowTex = new BABYLON.Texture(
-    "https://raw.githubusercontent.com/nicklvov/images/main/snow1.jpeg",
-    scene
-  );
-  */
+  skybox.material = skyboxMaterial
 
   const ground = BABYLON.MeshBuilder.CreateGroundFromHeightMap("ground", "textures/terrain22.png", {
     width: 4000, height: 4000, subdivisions: 250, maxHeight: 500, minHeight: 0
