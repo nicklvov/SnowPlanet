@@ -316,14 +316,13 @@ const createScene = function () {
     zChar.position = new BABYLON.Vector3(0, 0.05 * size, 0.9 * size);
   };
 
-  showAxis(300);
+  showAxis(400);
   /*
   const helper = scene.createDefaultXRExperience({createDeviceOrientationCamera: false})
   helper.enableInteractions()
   helper.enableTeleportation({floorMeshes: [ground]});
   */
  
-
   return scene;
 };
 
