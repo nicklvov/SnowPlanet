@@ -172,8 +172,8 @@ const createScene = function () {
   
   pillar.translate(BABYLON.Axis.Y, 10, BABYLON.Space.WORLD);
 
-  /*
-  for (let i = 1; i <= 2; i++) {
+  
+  for (let i = 1; i <= 5; i++) {
     const stal = pillar.clone()
     stal.position.x = 1000 * Math.random() - 500
     stal.position.z = 1000 * Math.random() - 500
@@ -181,7 +181,7 @@ const createScene = function () {
     stal.material.alpha = Math.random() + 0.5
     //stal.material.alpha = 0.5
   }
-  */
+  
 
   // Create a particle system
   var particleSystem = new BABYLON.ParticleSystem(
