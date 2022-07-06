@@ -326,4 +326,4 @@ var scene = createScene();
 
 engine.runRenderLoop(function () {
   scene.render();
-};
+});
