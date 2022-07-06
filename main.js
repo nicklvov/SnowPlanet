@@ -169,8 +169,7 @@ const createScene = function () {
 
   pillar.material = new BABYLON.StandardMaterial("");
   pillar.material.diffuseTexture = snowTex;
-  //pillar.material.wireframe = true;
-  //pillar.translate(BABYLON.Axis.X, 25, BABYLON.Space.WORLD);
+  
   pillar.translate(BABYLON.Axis.Y, 10, BABYLON.Space.WORLD);
 
   /*
@@ -318,23 +317,18 @@ const createScene = function () {
   };
 
   showAxis(300);
-  /*
+  
   const helper = scene.createDefaultXRExperience({createDeviceOrientationCamera: false})
   helper.enableInteractions()
   helper.enableTeleportation({floorMeshes: [ground]});
-  */
-  
+ 
 
   return scene;
 };
 
 var scene = createScene();
 
-const helper = scene.createDefaultXRExperience({createDeviceOrientationCamera: false})
- helper.enableInteractions()
- helper.enableTeleportation({floorMeshes: [ground]});
-
 
 engine.runRenderLoop(function () {
   scene.render();
-});
+};
