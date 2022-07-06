@@ -317,10 +317,11 @@ const createScene = function () {
   };
 
   showAxis(300);
-  
+  /*
   const helper = scene.createDefaultXRExperience({createDeviceOrientationCamera: false})
   helper.enableInteractions()
   helper.enableTeleportation({floorMeshes: [ground]});
+  */
  
 
   return scene;
