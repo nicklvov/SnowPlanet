@@ -638,11 +638,17 @@ const createScene = function () {
 
   showAxis(400);
   /////////// addede VR ////
+  /*
   var helper = scene.createDefaultVRExperience({
           createDeviceOrientationCamera: false,
         });
         helper.enableInteractions();
         helper.enableTeleportation({ floorMeshes: [square] });
+        */
+  
+  var helper = scene.createDefaultVRExperience({createDeviceOrientationCamera: false})
+	  helper.enableInteractions()
+    helper.enableTeleportation({floorMeshes: [ground]});
   
  ////////////////////////////////////////
   return scene;
