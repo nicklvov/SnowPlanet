@@ -193,13 +193,13 @@ var canvas = document.getElementById("renderCanvas");
   pillar.translate(BABYLON.Axis.Y, 10, BABYLON.Space.WORLD);
 
  
-  for (let i = 1; i <= 2; i++) {
+  for (let i = 1; i <= 3; i++) {
     const stal = pillar.clone()
     stal.position.x = 1000 * Math.random() - 500
     stal.position.z = 1000 * Math.random() - 500
-    stal.position.y = 50 * Math.random()
-    stal.material.alpha = Math.random() + 0.5
-    //stal.material.alpha = 0.5
+    stal.position.y = 2 * Math.random()
+    //stal.material.alpha = Math.random() + 0.5
+    stal.material.alpha = 0.8
   }
   
 
@@ -223,8 +223,8 @@ var canvas = document.getElementById("renderCanvas");
   particleSystem.colorDead = new BABYLON.Color4(0, 0, 0.2, 0.0);
 
   // Size of each particle (random between...
-  particleSystem.minSize = 0.1;
-  particleSystem.maxSize = 0.8;
+  particleSystem.minSize = 0.05;
+  particleSystem.maxSize = 0.1;
 
   // Life time of each particle (random between...
   particleSystem.minLifeTime = 2;
