@@ -102,7 +102,7 @@ var canvas = document.getElementById("renderCanvas");
 
   const ground = BABYLON.MeshBuilder.CreateGroundFromHeightMap(
     "ground",
-    "textures/terrain22.png",
+    "terrain22.png",
     {
       width: 4000,
       height: 4000,
@@ -209,7 +209,7 @@ var canvas = document.getElementById("renderCanvas");
   //Texture of each particle
 
   particleSystem.particleTexture = new BABYLON.Texture(
-    "textures/waterbump.png",
+    "waterbump.png",
     scene
   );
 
