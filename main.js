@@ -74,7 +74,7 @@ var canvas = document.getElementById("renderCanvas");
     { radius: 50, flat: true, subdivisions: 16 },
     scene
   );
-  bigPlanet.position = new BABYLON.Vector3(-200, 1000, -500);
+  bigPlanet.position = new BABYLON.Vector3(-200, 1200, -500);
   bigPlanet.material = new BABYLON.StandardMaterial("light", scene);
   bigPlanet.material.emissiveColor = new BABYLON.Color3(0.93, 0.91, 0.11, 0.55);
 
@@ -132,8 +132,7 @@ var canvas = document.getElementById("renderCanvas");
       const path = [];
       //let h = 1;
       for (let a = 0; a < 2 * Math.PI; a += Math.PI / 5) {
-        //let x = Math.cos(a) +  0.5 * (Math.random() + 0.2) - i * h;
-        //let z = Math.sin(a) +  0.5 * (Math.random() + 0.2) - i * h;
+        
         let b = 5; //Math.random() + 0.01;
         let r = (1 - i * h) * b;
         let x = Math.cos(a) * r + 0.5 * (Math.random() + 0.2);
@@ -193,7 +192,7 @@ var canvas = document.getElementById("renderCanvas");
   //pillar.translate(BABYLON.Axis.X, 25, BABYLON.Space.WORLD);
   pillar.translate(BABYLON.Axis.Y, 10, BABYLON.Space.WORLD);
 
-  /*
+ 
   for (let i = 1; i <= 2; i++) {
     const stal = pillar.clone()
     stal.position.x = 1000 * Math.random() - 500
@@ -202,7 +201,7 @@ var canvas = document.getElementById("renderCanvas");
     stal.material.alpha = Math.random() + 0.5
     //stal.material.alpha = 0.5
   }
-  */
+  
 
   // Create a particle system
   var particleSystem = new BABYLON.ParticleSystem("particles", 6000, scene);
@@ -344,7 +343,7 @@ var canvas = document.getElementById("renderCanvas");
           createDeviceOrientationCamera: false,
         });
         helper.enableInteractions();
-        //helper.enableTeleportation({ floorMeshes: [ground] });
+        helper.enableTeleportation({ floorMeshes: [ground] });
 
         return scene;
       };
